@@ -33,6 +33,7 @@ class App extends React.Component {
             </Card>
         );
     }
+
     render() {
         return (
             <View style={styles.container}>

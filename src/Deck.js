@@ -3,7 +3,7 @@ import { View, Animated, PanResponder } from 'react-native';
 
 class Deck extends Component {
     constructor(props){
-        super(props)
+        super(props);
 
         const position = new Animated.ValueXY();
         const panResponder = PanResponder.create({
@@ -16,11 +16,13 @@ class Deck extends Component {
 
         this.state = { panResponder, position };
     }
+
     renderCards(){
         return this.props.data.map(item => {
             return this.props.renderCard(item)
         })
     }
+
     render(){
         return(
             <Animated.View
