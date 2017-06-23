@@ -22,7 +22,7 @@ class Deck extends Component {
   getCardStyle() {
     const { position } = this.state;
     const rotate = position.x.interpolate({
-      inputRange: [-SCREEN_WIDTH*2, 0, SCREEN_WIDTH*2],
+      inputRange: [-SCREEN_WIDTH*1.5, 0, SCREEN_WIDTH*1.5],
       outputRange: ['-120deg', '0deg', '120deg'],
     });
     return {
