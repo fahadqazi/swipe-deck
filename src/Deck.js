@@ -38,9 +38,9 @@ class Deck extends Component {
   }
 
   onSwipeComplete(direction) {
-    const { onSwipeRight, onSwipeLeft } = this.props;
-    const item = this.props.data[this.state.index];
-    direction === 'right' ? onSwipeRight() : onSwipeLeft();
+    const { onSwipeRight, onSwipeLeft, data } = this.props;
+    const item = data[this.state.index];
+    direction === 'right' ? onSwipeRight(item) : onSwipeLeft(item);
   }
 
   resetPosition() {
