@@ -26,7 +26,7 @@ class Deck extends Component {
       },
     });
 
-    this.state = { panResponder, position };
+    this.state = { panResponder, position, index: 0 };
   }
 
   forceSwipe(direction) {
@@ -39,6 +39,7 @@ class Deck extends Component {
 
   onSwipeComplete(direction) {
     const { onSwipeRight, onSwipeLeft } = this.props;
+    const item = this.props.data[this.state.index];
     direction === 'right' ? onSwipeRight() : onSwipeLeft();
   }
 
