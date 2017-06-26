@@ -1,3 +1,3 @@
 # React Native App
 
-## App using left - right swipe functionality
+## App uses animations to swipe a deck on pic left/right.
