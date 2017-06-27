@@ -39,7 +39,7 @@ class Deck extends Component {
     Animated.timing(this.state.position, {
       toValue: { x: x, y: 0 },
       duration: SWIPEOUT_DURATION,
-    }).start(() => onSwipeComplete(direction));
+    }).start(() => this.onSwipeComplete(direction));
   }
 
   onSwipeComplete(direction) {
@@ -69,8 +69,12 @@ class Deck extends Component {
   }
 
   renderCards() {
+    if(this.state.index >= this.props.data.length){
+      return this.props.renderNoMoreCards();
+    }
     return this.props.data.map((item, i) => {
-      if (i === 0) {
+      if (i < this.state.index){return null}
+      if (i === this.state.index) {
         return (
           <Animated.View
             key={item.id}
