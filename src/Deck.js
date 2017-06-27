@@ -6,6 +6,10 @@ const SWIPE_THRESHOLD = 0.25 * SCREEN_WIDTH;
 const SWIPEOUT_DURATION = 250;
 
 class Deck extends Component {
+  static defaultProps = {
+
+  }
+
   constructor(props) {
     super(props);
 
