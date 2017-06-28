@@ -41,7 +41,7 @@ class Deck extends Component {
     this.state = { panResponder, position, index: 0 };
   }
 
-  componentDidUpdate() {
+  componentWillUpdate() {
     UIManager.setLayOutAnimationEnabledExperimental &&
       UIManager.setLayOutAnimationEnabledExperimental(true);
     LayoutAnimation.spring();
